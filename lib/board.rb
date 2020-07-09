@@ -32,6 +32,7 @@ class Board < Player
   def won?
     @wins.each do |i|
       win_comb = [board[i[0]], board[i[1]], board[i[2]]]
+      # rubocop: disable Style/GuardClause
       if win_comb.all? { |x| x == 'O' }
         return true
       elsif win_comb.all? { |x| x == 'X' }
@@ -46,6 +47,7 @@ class Board < Player
       win_comb = [board[i[0]], board[i[1]], board[i[2]]]
       if win_comb.all? { |x| x == 'O' }
         return "winner is #{player2.name}"
+        # rubocop: enable Style/GuardClause
       elsif win_comb.all? { |x| x == 'X' }
         return "winner is #{player1.name}"
       end
