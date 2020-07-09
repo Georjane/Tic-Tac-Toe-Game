@@ -36,7 +36,7 @@
 
 ## 🔴 Live Demo
 
-[Live Demo](https://repl.it/join/eegkcbpi-witahgeorjane)
+[Live Demo](https://repl.it/join/xeigvvgb-witahgeorjane)
 
 ### 🛠 Installing <a name = "installing"></a>
 
