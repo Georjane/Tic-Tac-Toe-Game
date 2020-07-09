@@ -23,4 +23,27 @@ class Board < Player
     end
   end
 
+  def won?
+    @wins.each do |i|
+      win_comb = [board[i[0]], board[i[1]], board[i[2]]]
+      if win_comb.all? { |x| x == 'O' }
+        return true
+      elsif win_comb.all? { |x| x == 'X' }
+        return true
+      end 
+    end
+    return false
+  end
+
+  def winner
+    @wins.each do |i|
+      win_comb = [board[i[0]], board[i[1]], board[i[2]]]
+      if win_comb.all? { |x| x == 'O' }
+       return "winner is #{player2.name}"
+      elsif win_comb.all? { |x| x == 'X' }
+        return "winner is #{player1.name}"
+      end 
+    end
+  end
+
 end
