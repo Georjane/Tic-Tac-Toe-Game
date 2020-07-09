@@ -26,7 +26,7 @@
 ## 🧐 About <a name = "about"></a>
 <h3 align="center"> This is an assignment for the Microverse course. The goal of this project is to create a Tic Tac Toe game using the programming language Ruby. The game works inside the console. Each number (1 to 9) corresponds to a position on the board. When one of the players reaches a win condition (3 consecutive symbols - X or O ) the game says who the winner is.</h3>
 
-![screenshot]()
+![screenshot](screenshot.png)
 
 ---
 
@@ -36,7 +36,7 @@
 
 ## 🔴 Live Demo
 
-[Live Demo]()
+[Live Demo](https://repl.it/join/eegkcbpi-witahgeorjane)
 
 ### 🛠 Installing <a name = "installing"></a>
 
