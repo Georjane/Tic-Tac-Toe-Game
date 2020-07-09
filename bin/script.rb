@@ -42,4 +42,4 @@ while play.won? == false && turns < 10
   puts play.winner if play.won?
   turns += 1
 end
-puts 'Game Over!!!'
+puts "It's a Draw, Game Over!!!" if turns == 10
