@@ -12,15 +12,21 @@ class Board < Player
   end
 
   def display_board
-    "\n #{board[0]} | #{board[1]} | #{board[2]} \n ---------\n #{board[3]} | #{board[4]} | #{board[5]} \n ---------\n #{board[6]} | #{board[7]} | #{board[8]} \n\n"
+    "
+    #{board[0]} | #{board[1]} | #{board[2]}
+    ---------
+    #{board[3]} | #{board[4]} | #{board[5]}
+    ---------
+    #{board[6]} | #{board[7]} | #{board[8]} \n
+    "
   end
 
   def swap(num)
-    if @counts.odd?
-    board[num - 1] = player1.piece_x
-    else
-    board[num - 1] = player2.piece_o
-    end
+    board[num - 1] = if @counts.odd?
+                       player1.piece_x
+                     else
+                       player2.piece_o
+                     end
   end
 
   def won?
@@ -30,20 +36,19 @@ class Board < Player
         return true
       elsif win_comb.all? { |x| x == 'X' }
         return true
-      end 
+      end
     end
-    return false
+    false
   end
 
   def winner
     @wins.each do |i|
       win_comb = [board[i[0]], board[i[1]], board[i[2]]]
       if win_comb.all? { |x| x == 'O' }
-       return "winner is #{player2.name}"
+        return "winner is #{player2.name}"
       elsif win_comb.all? { |x| x == 'X' }
         return "winner is #{player1.name}"
-      end 
+      end
     end
   end
-
 end

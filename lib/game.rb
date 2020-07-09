@@ -1,27 +1,21 @@
 require_relative 'board.rb'
 
-class Game < Board 
-
+class Game < Board
   def valid_move?(num)
     board.include?(num)
   end
 
   def move(num)
     count(num)
-    if valid_move?(num)
-      swap(num)
-    end
-    display_board()
+    swap(num) if valid_move?(num)
+    display_board
   end
 
-  def count(num)    
-    if valid_move?(num)
-      @counts += 1
-    end
+  def count(num)
+    @counts += 1 if valid_move?(num)
   end
 
-  def invalid 
-    "INVALID MOVE!!! Please try again"
+  def invalid
+    'INVALID MOVE!!! Please try again'
   end
-
 end
