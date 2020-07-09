@@ -1,7 +1,7 @@
 # A file which has a shebang line as its first line is
 # granted execute permission.
 
-#!/usr/bin/env ruby
+# !/usr/bin/env ruby
 require_relative '../lib/board.rb'
 require_relative '../lib/player.rb'
 require_relative '../lib/game.rb'
