@@ -1,6 +1,3 @@
-# A file which has a shebang line as its first line is
-# granted execute permission.
-
 # !/usr/bin/env ruby
 require_relative '../lib/board.rb'
 require_relative '../lib/player.rb'
@@ -38,8 +35,7 @@ while play.won? == false && turns < 10
   end
 
   puts play.move(num)
-
   puts play.winner if play.won?
   turns += 1
 end
-puts 'Game Over!!!'
+puts "It's a Draw, Game Over!!!" if turns == 10 && !play.won?

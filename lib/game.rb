@@ -5,6 +5,12 @@ class Game < Board
     board.include?(num)
   end
 
+  def invalid
+    'INVALID MOVE!!! Please try again'
+  end
+
+  private
+
   def move(num)
     count(num)
     swap(num) if valid_move?(num)
@@ -13,9 +19,5 @@ class Game < Board
 
   def count(num)
     @counts += 1 if valid_move?(num)
-  end
-
-  def invalid
-    'INVALID MOVE!!! Please try again'
   end
 end
