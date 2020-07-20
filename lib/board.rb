@@ -1,7 +1,7 @@
 require_relative 'player.rb'
 
 class Board < Player
-  attr_accessor :board, :player2, :player1
+  attr_accessor :board, :player2, :player1, :counts
 
   def initialize(player1, player2)
     @board = (1..9).to_a
@@ -20,6 +20,8 @@ class Board < Player
     #{board[6]} | #{board[7]} | #{board[8]} \n
     "
   end
+
+  private
 
   def swap(num)
     board[num - 1] = if @counts.odd?
@@ -46,10 +48,10 @@ class Board < Player
     @wins.each do |i|
       win_comb = [board[i[0]], board[i[1]], board[i[2]]]
       if win_comb.all? { |x| x == 'O' }
-        return "winner is #{player2.name}! Good job!!!"
+        return "The winner is #{player2.name}! Good job!!!"
         # rubocop: enable Style/GuardClause
       elsif win_comb.all? { |x| x == 'X' }
-        return "winner is #{player1.name}! Good job!!!"
+        return "The winner is #{player1.name}! Good job!!!"
       end
     end
   end
