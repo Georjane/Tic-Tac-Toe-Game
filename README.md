@@ -95,6 +95,20 @@ A winning position would like the image below at the end. As soon as someone get
 For a detailed explanation, please have a look at this guide.
 ```
 
+## Testing
+### Install Rspec
+
+```
+$ gem install rspec
+```
+To test the code, run rspec from root of the folder using terminal as follows
+
+```
+rspec
+```
+
+Rspec is used for the test.
+
 ## ✒️  Author <a name = "author"></a>
 
 👤 **Witah Georjane**
